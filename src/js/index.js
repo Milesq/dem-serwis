@@ -1,3 +1,7 @@
+/**
+ * @param {Document} [doc] - Somebody's name.
+ */
+
 export default doc => {
-    console.log('index');
+    console.log(doc);
 };

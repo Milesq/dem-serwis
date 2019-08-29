@@ -2,8 +2,11 @@
 @import './mixins';
 @import url('https://fonts.googleapis.com/css?family=Lexend+Peta&display=swap&subset=latin-ext');
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: B612, sans-serif;
   font-family: 'Lexend Peta', sans-serif;
   @include center;
   flex-direction: column;
@@ -51,4 +54,8 @@ body {
   // width: 100%;
   height: $height;
   background: $indicator-color;
+}
+
+main {
+  padding: 0 10vw;
 }

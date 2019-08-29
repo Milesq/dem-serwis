@@ -1,3 +1,30 @@
-:root {
-  background: #d9e2e0;
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap&subset=latin-ext');
+@import './mixins';
+
+.container {
+  background-color: #eee;
+  padding: 0 30px;
+  padding-top: 100px;
+  min-height: calc(100vh - 155px);
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.6em;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.image {
+  width: 90%;
+  @include shadow;
+  transition: transform .2s ease;
+
+  &:hover {
+    transform: scale(1.01);
+  }
 }
