@@ -1,6 +1,6 @@
-import index from './js/index.ts';
-import about from './js/about.ts';
-import who from './js/who.ts';
+import index from './js/index';
+import about from './js/about';
+import who from './js/who';
 
 export const routes = [
     {
