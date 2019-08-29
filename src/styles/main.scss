@@ -12,8 +12,9 @@ body {
 .navigation {
   position: relative;
   background: $topbar-bg;
-  margin-bottom: 100px;
   width: 100%;
+  box-shadow: 0 2px 7px -3px #000;
+
   @include center;
 
   &__container {
