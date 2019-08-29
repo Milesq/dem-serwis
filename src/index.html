@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DemSerwis - Szkolny Serwis komputerowy</title>
     <link rel="stylesheet" href="./styles/main.scss">
 </head>
 
 <body>
-    <a href="/" data-navigo>Strona Główna</a>
-    <a href="/who" data-navigo>Kim jesteśmy</a>
-    <a href="/about" data-navigo>Co robimy</a>
+    <nav class="navigation">
+        <div class="navigation__container">
+            <a class="navigation__item" href="/" data-navigo>Strona Główna</a>
+            <a class="navigation__item" href="/who" data-navigo>Kim jesteśmy</a>
+            <a class="navigation__item" href="/about" data-navigo>Co robimy</a>
+        </div>
+    </nav>
 
     <main id="app"></main>
 

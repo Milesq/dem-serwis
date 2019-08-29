@@ -1,3 +1,4 @@
+import 'normalize.css';
 import 'regenerator-runtime/runtime';
 import Navigo from 'navigo';
 

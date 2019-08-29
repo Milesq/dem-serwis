@@ -1,3 +1,37 @@
-:root {
-  background: #d9e2e0;
+@import './var';
+@import './mixins';
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  @include center;
+  flex-direction: column;
+}
+
+.navigation {
+  background: $topbar-bg;
+  margin-bottom: 100px;
+  width: 100%;
+  @include center;
+
+  &__container {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: 500;
+    font-size: 1.3em;
+
+    border-radius: 1px;
+    transition: .15s ease-in background-color;
+    will-change: background-color;
+
+    &:hover {
+      background-color: darken($topbar-bg, 5%);
+    }
+  }
 }
