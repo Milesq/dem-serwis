@@ -2,6 +2,7 @@ import 'normalize.css';
 import 'regenerator-runtime/runtime';
 import Navigo from 'navigo';
 
+import indicatorRefresh from './indicator';
 import { routes } from '../config';
 
 const router = new Navigo(undefined, true);
@@ -23,6 +24,7 @@ router.notFound(() => router.navigate('/'));
 router.resolve();
 
 async function setContent(page, callback) {
+    indicatorRefresh(page);
     page = await fetch(page).then(x => x.text());
     page = parser.parseFromString(page, 'text/html');
 

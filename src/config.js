@@ -9,11 +9,11 @@ export const routes = [
         handler: index
     },
     {
-        name: 'about',
-        handler: about
-    },
-    {
         name: 'who',
         handler: who
+    },
+    {
+        name: 'about',
+        handler: about
     }
 ];
