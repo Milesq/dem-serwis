@@ -33,7 +33,7 @@ function Indicator(canvas = required()) {
         return new Promise(resolve => {
             let speed = 0;
             let wasLessThen5 = false;
-            let wasLessThen30 = false;
+            let wasLessThen45 = false;
 
             const ctx = this.ctx;
 
@@ -55,8 +55,8 @@ function Indicator(canvas = required()) {
                     wasLessThen5 = true;
                     this.lastPos = Math.round(this.lastPos);
                     speed = direction;
-                } else if (Math.abs(this.lastPos - to) < 45 && !wasLessThen30) {
-                    wasLessThen30 = true;
+                } else if (Math.abs(this.lastPos - to) < 45 && !wasLessThen45) {
+                    wasLessThen45 = true;
                     speed -= reverseAcceleration * direction;
                 } else if (Math.abs(this.lastPos - to) < 5) {
                     this.lastPos = to;
@@ -72,7 +72,7 @@ function Indicator(canvas = required()) {
 
                 this.lastPos += speed;
 
-                ctx.fillRect(this.lastPos, 0, len, canvas.height);
+                ctx.fillRect(this.lastPos, 0, len - Math.abs(speed), canvas.height);
                 ctx.fill();
 
                 setTimeout(() => window.requestAnimationFrame(update.bind(this)), 3);
