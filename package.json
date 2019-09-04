@@ -7,8 +7,8 @@
         "dev": "parcel src/*.html --open http://localhost:1234/index.html",
         "build": "parcel build src/*.html --no-source-maps",
         "test": "jest",
-        "lint": "eslint . --fix && postcss -d .tmp src/**/*.scss",
-        "clean": "rm -rf .tmp dist .cache"
+        "lint": "eslint . --fix && stylelint src/styles/*.scss",
+        "clean": "rm -rf dist .cache"
     },
     "husky": {
         "hooks": {
@@ -17,11 +17,11 @@
         }
     },
     "lint-staged": {
-        "(src|tests)/**/*.js": [
+        "src/**/*.js": [
             "eslint --fix"
         ],
-        "src/**/*.[c(sc)]ss": [
-            "postcss -d .tmp"
+        "src/**/*.scss": [
+            "stylelint"
         ]
     },
     "devDependencies": {
@@ -31,8 +31,7 @@
         "babel-core": "^6.26.3",
         "babel-eslint": "^10.0.3",
         "babel-polyfill": "^6.26.0",
-        "colorguard": "^1.2.1",
-        "cssnano": "^4.1.10",
+        "dart-sass": "^1.22.10",
         "doiuse": "^4.2.0",
         "eslint": "^6.2.2",
         "eslint-config-prettier": "^6.1.0",
@@ -40,14 +39,9 @@
         "husky": "^3.0.4",
         "jest": "^24.9.0",
         "lint-staged": "^9.2.3",
-        "node-sass": "^4.12.0",
         "parcel": "^1.12.3",
-        "postcss": "^7.0.17",
-        "postcss-cli": "^6.1.3",
-        "postcss-modules": "^1.4.1",
-        "postcss-preset-env": "^6.7.0",
-        "postcss-scss": "^2.0.0",
         "prettier": "^1.18.2",
+        "sass": "^1.23.0-module.beta.1",
         "stylelint": "^10.1.0",
         "stylelint-config-recommended-scss": "^3.3.0",
         "stylelint-scss": "^3.10.0"
