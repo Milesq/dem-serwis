@@ -1,10 +1,6 @@
 @import './mixins';
 @import 'normalize.css';
 
-.container {
-  min-height: 120vh;
-}
-
 .portraits {
   $img-width: 15vw;
   display: grid;
