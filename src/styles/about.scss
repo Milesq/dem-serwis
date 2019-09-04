@@ -1,6 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap&subset=latin-ext');
 @import './mixins';
+@import 'normalize.css';
 
 .container {
-  min-height: 120vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  background-color: #eee;
+
+  padding: 0 30px;
+  padding-top: 95px;
+  min-height: calc(100vh - 155px);
+}
+
+.image {
+  @include thumbnail;
+}
+
+.short-description {
+  margin-left: 40px;
+}
+
+.text {
+  margin-top: 40px;
+
+  grid-column-start: 1;
+  grid-column-end: span 3;
 }

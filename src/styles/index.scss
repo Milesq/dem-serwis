@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap&subset=latin-ext');
 @import './mixins';
+@import 'normalize.css';
 
 .container {
   background-color: #eee;
@@ -25,9 +26,4 @@ p {
 .image {
   width: 90%;
   @include shadow;
-  transition: transform .2s ease;
-
-  &:hover {
-    transform: scale(1.01);
-  }
 }

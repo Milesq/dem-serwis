@@ -13,7 +13,10 @@ body {
 }
 
 .navigation {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
   background: $topbar-bg;
   width: 100%;
   box-shadow: 0 2px 7px -3px #000;
@@ -25,7 +28,6 @@ body {
   &__container {
     width: 60%;
     display: grid;
-    // justify-content: space-around;
     grid-template-columns: repeat(3, 1fr);
   }
 
