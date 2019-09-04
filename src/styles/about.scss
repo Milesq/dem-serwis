@@ -4,11 +4,13 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  background-color: #eee;
+}
 
+.wrapper {
+  background-color: #eee;
   padding: 0 30px;
-  padding-top: 95px;
-  min-height: calc(100vh - 155px);
+  padding-top: 2.5%;
+  min-height: calc(100vh - 90px);
 }
 
 .image {
@@ -20,8 +22,6 @@
 }
 
 .text {
-  margin-top: 40px;
-
   grid-column-start: 1;
   grid-column-end: span 3;
 }
