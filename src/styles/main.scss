@@ -12,6 +12,13 @@ body {
   flex-direction: column;
 }
 
+.indicator {
+  height: 5px;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
 .navigation {
   position: sticky;
   top: 0;
@@ -50,13 +57,18 @@ body {
   }
 }
 
-.indicator {
-  height: 5px;
-  width: 100%;
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-
 main {
   padding: 0 10vw;
+}
+
+.footer {
+  background: #fbfbfb;
+  color: #aaa;
+
+  font-size: .75rem;
+  font-weight: 300;
+  text-align: center;
+
+  width: 100%;
+  padding: 10px;
 }
