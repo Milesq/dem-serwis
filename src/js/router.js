@@ -11,9 +11,7 @@ const parser = new DOMParser();
 const indicator = new Indicator(document.getElementById('indicator'));
 
 routes.forEach(({ path, name, handler }) => {
-    if (path == undefined) {
-        path = `/${name}`;
-    }
+    path = path || `/${name}`;
 
     router.on(path, () => {
         setContent(`${name}.html`, handler);
