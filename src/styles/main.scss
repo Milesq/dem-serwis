@@ -52,7 +52,7 @@ body {
     user-select: none;
 
     &:hover {
-      background-color: darken($topbar-bg, 5%);
+      background-color: darken($topbar-bg, 10%);
     }
   }
 }

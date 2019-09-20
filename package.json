@@ -5,7 +5,7 @@
     "license": "ISC",
     "scripts": {
         "dev": "parcel src/*.html --open http://localhost:1234/index.html",
-        "build": "parcel build src/*.html --no-source-maps",
+        "build": "parcel build src/*.html --no-source-maps --public-url .",
         "test": "jest",
         "lint": "eslint . --fix && stylelint src/styles/*.scss",
         "clean": "rm -rf dist .cache"

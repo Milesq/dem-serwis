@@ -7,7 +7,8 @@ function Indicator(canvas = required()) {
      * @type {CanvasRenderingContext2D}
      */
     this.ctx = canvas.getContext('2d');
-    this.ctx.fillStyle = '#0095ff';
+    this.ctx.fillStyle = '#fff';
+    // this.ctx.fillStyle = '#0095ff';
     this.lastPos = null;
 
     this.move = async path => {
