@@ -22,12 +22,32 @@ router.notFound(() => router.navigate('/'));
 
 router.resolve();
 
-async function setContent(page, callback) {
-    indicator.move(page);
-    page = await fetch(page).then(x => x.text());
+const additionalsCallback = new Proxy(
+    {
+        'index_page.html'() {
+            document.querySelector('.fluid-img').classList.remove('hidden');
+        }
+    },
+    {
+        get(target, name) {
+            const hide = () => {
+                document.querySelector('.fluid-img').classList.add('hidden');
+            };
+
+            return name in target ? target[name] : hide;
+        }
+    }
+);
+
+async function setContent(url, callback) {
+    indicator.move(url);
+    let page = await fetch(url).then(x => x.text());
     page = parser.parseFromString(page, 'text/html');
 
     appShadow.innerHTML = page.querySelector('template').innerHTML;
     appShadow.appendChild(page.querySelector('link').cloneNode(true));
+
+    additionalsCallback[url]();
+
     callback(appShadow);
 }

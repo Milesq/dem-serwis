@@ -10,6 +10,8 @@ body {
   font-family: 'Lexend Peta', sans-serif;
   @include center;
   flex-direction: column;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .indicator {
@@ -71,4 +73,26 @@ main {
 
   width: 100%;
   padding: 10px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.fluid-img {
+  width: 100vw;
+  height: 80vh;
+
+  background-image: url(https://placeimg.com/1000/600/any);
+  background-color: #bbb;
+  // background-color: #f00;
+  // background-color: #f0f;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+
+  @include center;
+  flex-direction: column;
+  color: white;
 }
