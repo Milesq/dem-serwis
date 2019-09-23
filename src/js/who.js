@@ -48,14 +48,12 @@ export default document => {
 
     document.querySelectorAll('.portraits__image').forEach(portrait => {
         portrait.addEventListener('click', () => {
-            lb.src = 'https://placeimg.com/300/300/any';
-            lb.title = 'Miłosz Wiśniewski';
-            lb.desc = `Lorem ipsum dolor sit,
-                      amet consectetur adipisicing
-                      elit. In vero sit nisi atque
-                      inventore ut rem natus sequi
-                      eveniet magnam harum enim officia eligendi
-                      rerum dolores sunt quam, ad tempore.`;
+            const { innerHTML: desc } = portrait.querySelector('.description');
+            const { innerHTML: name } = portrait.querySelector('.name');
+
+            lb.src = portrait.dataset.img;
+            lb.title = name;
+            lb.desc = desc;
             lb.show();
         });
     });
