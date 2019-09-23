@@ -1,0 +1,65 @@
+@import './mixins'
+
+$radius: 3px
+
+.curtain
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    background: rgba(0, 0, 0, .6)
+    z-index: 1000
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    &__content
+        &-wrapper
+            position: relative
+
+            box-shadow: 0 1px 5px -3px #000
+            background-color: #fff
+            width: 60vw
+            height: 75vh
+            border-radius: $radius
+
+        height: 100%
+        width: 100%
+        display: grid
+        grid-template-columns: 3fr 5fr
+
+    &__image
+        background-size: cover !important
+        border-top-left-radius: $radius
+        border-bottom-left-radius: $radius
+        background-repeat: no-repeat !important
+
+    &__description
+        padding: 40px
+
+    .cross
+        cursor: pointer
+
+        position: absolute
+
+        $pad: 15px
+        top: $pad * 2
+        right: $pad
+
+        &::after,
+        &::before
+            content: ''
+            display: block
+            width: 40px
+            height: 5px
+            background-color: #000
+            border-radius: 4px
+
+        $pseudoelements: 'after' 1, 'before' -1
+
+        @each $el, $i in $pseudoelements
+            &::#{$el}
+                transform-origin: 50% 50%
+                transform: rotate($i * 50deg)
