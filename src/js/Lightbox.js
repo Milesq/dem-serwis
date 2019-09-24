@@ -72,7 +72,7 @@ function Lightbox() {
             .add({
                 targets: '.curtain',
                 backgroundColor: 'rgba(0, 0, 0, 0)',
-                duration: 250,
+                duration: 350,
                 easing: 'linear'
             })
             .add(
@@ -84,7 +84,7 @@ function Lightbox() {
                         contentWrapper.style.display = 'none';
                     }
                 },
-                '-=100'
+                '-=300'
             );
     };
 }
