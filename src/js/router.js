@@ -1,5 +1,6 @@
 import 'normalize.css';
 import 'regenerator-runtime/runtime';
+import 'hamburgers/dist/hamburgers.min.css';
 import Navigo from 'navigo';
 
 import Indicator from './indicator';

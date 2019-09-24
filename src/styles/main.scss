@@ -21,7 +21,7 @@ body {
   grid-column-start: 1;
   grid-column-end: 4;
 
-  @media (max-width: 790px) {
+  @media (max-width: nth($breakpoints, 1)) {
     display: none;
   }
 }
@@ -34,13 +34,22 @@ body {
   background: $topbar-bg;
   width: 100%;
   box-shadow: 0 2px 7px -3px #000;
-  display: flex;
-  flex-direction: column;
 
   @include center;
+  flex-direction: column;
+
+  @media (max-width: nth($breakpoints, 2)) {
+    align-items: flex-end;
+  }
 
   &__container {
-    width: 60%;
+    @media (max-width: nth($breakpoints, 2)) {
+      display: none;
+    }
+
+    @media (min-width: nth($breakpoints, 1)) {
+      width: 60%;
+    }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -61,6 +70,23 @@ body {
     &:hover {
       background-color: darken($topbar-bg, 10%);
     }
+  }
+}
+
+.hamburger {
+  @media (min-width: nth($breakpoints, 2) - 1) {
+    display: none !important;
+  }
+}
+
+.mobile-menu {
+  display: none;
+  @media (min-width: nth($breakpoints, 2) - 1) {
+    display: none !important;
+  }
+
+  &--is-active {
+    display: block;
   }
 }
 
