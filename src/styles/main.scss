@@ -5,6 +5,10 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css');
 @import url('https://fonts.googleapis.com/css?family=Lexend+Peta&display=swap&subset=latin-ext');
 
+$hamburger-types: (collapse);
+$hamburger-layer-color: #fff;
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
