@@ -1,18 +1,35 @@
+@import './var';
 @import './mixins';
 @import 'normalize.css';
 
 .portraits {
-  $img-width: 15vw;
+  $img-width: 15vw, 33vmax, 45vmax;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: nth($breakpoints, 3)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: nth($breakpoints, 4)) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   &__image {
     cursor: pointer;
-    margin: $img-width * 1/3;
+    margin: nth($img-width, 1) * 1/3;
     @include shadow;
-    width: $img-width;
-    height: $img-width;
+    @include size(nth($img-width, 1));
+
+    @media (max-width: nth($breakpoints, 3)) {
+      @include size(nth($img-width, 2));
+      margin: nth($img-width, 2) * 1/3;
+    }
+
+    @media (max-width: nth($breakpoints, 4)) {
+      @include size(nth($img-width, 3));
+    }
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,15 +41,22 @@
       position: absolute;
       top: 105%;
       white-space: nowrap;
+
+      @media (max-width: nth($breakpoints, 3)) {
+        text-align: center;
+        width: 100%;
+      }
     }
 
     .description {
       display: none;
     }
 
-    &--first {
-      grid-column-start: 1;
-      grid-column-end: span 3;
+    @media (min-width: nth($breakpoints, 3)) {
+      &--first {
+        grid-column-start: 1;
+        grid-column-end: span 3;
+      }
     }
 
     @for $i from 1 through 4 {
