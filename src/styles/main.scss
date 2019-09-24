@@ -46,6 +46,12 @@ body {
 
   @media (max-width: nth($breakpoints, 2)) {
     align-items: flex-end;
+    &:not(&--mobile-active) {
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 0 10px;
+    }
   }
 
   &__container {
@@ -155,4 +161,12 @@ main {
   @include center;
   flex-direction: column;
   color: white;
+}
+
+.link-logo {
+  width: 52px;
+
+  @media (min-width: nth($breakpoints, 2) - 1) {
+    display: none;
+  }
 }
