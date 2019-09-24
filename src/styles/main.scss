@@ -125,7 +125,9 @@ body {
 }
 
 main {
-  padding: 0 10vw;
+  @media (min-width: nth($breakpoints, 2) - 1) {
+    padding: 0 10vw;
+  }
 }
 
 .footer {
@@ -157,6 +159,7 @@ main {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: multiply;
+  background-position: center;
 
   @include center;
   flex-direction: column;
