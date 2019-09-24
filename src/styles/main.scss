@@ -20,6 +20,10 @@ body {
   width: 100%;
   grid-column-start: 1;
   grid-column-end: 4;
+
+  @media (max-width: 790px) {
+    display: none;
+  }
 }
 
 .navigation {

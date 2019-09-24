@@ -8,7 +8,13 @@ import { routes } from '../config';
 const router = new Navigo(undefined, true);
 const appShadow = document.querySelector('#app').attachShadow({ mode: 'open' });
 const parser = new DOMParser();
-const indicator = new Indicator(document.getElementById('indicator'));
+let indicator = {
+    move() {}
+};
+
+if (window.outerWidth >= 800) {
+    indicator = new Indicator(document.getElementById('indicator'));
+}
 
 routes.forEach(({ path, name, handler }) => {
     path = path || `/${name}`;
