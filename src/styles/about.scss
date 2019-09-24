@@ -1,29 +1,29 @@
-// @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap&subset=latin-ext');
-// @import './mixins';
-// @import 'normalize.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap&subset=latin-ext');
+@import './mixins';
+@import 'normalize.css';
 
-// .container {
-//   background-color: #eee;
-//   padding: 0 30px;
-//   padding-top: 2.5%;
-//   min-height: calc(100vh - 155px);
-//   text-align: center;
+.container {
+  background-color: #eee;
+  padding: 0 30px;
+  padding-top: 2.5%;
+  min-height: calc(100vh - 155px);
+  text-align: center;
 
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-//   & > * {
-//     margin: 5%;
-//   }
-// }
+  & > * {
+    margin: 5%;
+  }
+}
 
-// p {
-//   text-align: justify;
-//   line-height: 1.1 em;
-//   font-family: 'Roboto Mono', monospace;
-// }
+p {
+  text-align: justify;
+  line-height: 1.1 em;
+  font-family: 'Roboto Mono', monospace;
+}
 
-// .image {
-//   width: 90%;
-//   @include shadow;
-// }
+.image {
+  width: 90%;
+  @include shadow;
+}
