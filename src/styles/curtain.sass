@@ -6,10 +6,12 @@ $radius: 3px
     position: fixed
     top: 0
     left: 0
+
     width: 100vw
     height: 100vh
-    background: rgba(0, 0, 0, .6)
+    background-color: rgba(0, 0, 0, 0)
     z-index: 1000
+    pointer-events: none
 
     display: flex
     align-items: center
@@ -31,10 +33,11 @@ $radius: 3px
         grid-template-columns: 3fr 5fr
 
     &__image
-        background-size: cover !important
         border-top-left-radius: $radius
         border-bottom-left-radius: $radius
+        background-size: cover !important
         background-repeat: no-repeat !important
+        background-position: 50% 50%
 
     &__description
         padding: 40px
