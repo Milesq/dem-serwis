@@ -1,6 +1,8 @@
 @import './var';
 @import './mixins';
 @import './curtain';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css');
 @import url('https://fonts.googleapis.com/css?family=Lexend+Peta&display=swap&subset=latin-ext');
 
 *, *::before, *::after {
@@ -55,17 +57,37 @@ body {
   }
 
   &__item {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px;
-    font-weight: 500;
-    font-size: 1.3em;
-    text-align: center;
+    &,
+    &--mobile {
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 500;
+
+      user-select: none;
+
+      .fas {
+        font-size: 18px;
+        display: block;
+      }
+
+      a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+    &--mobile {
+      margin: 25px 15px;
+      width: 100%;
+    }
 
     border-radius: 1px;
     transition: .15s ease-in background-color;
     will-change: background-color;
-    user-select: none;
+    padding: 15px;
+    font-size: 1.3em;
 
     &:hover {
       background-color: darken($topbar-bg, 10%);
@@ -80,6 +102,8 @@ body {
 }
 
 .mobile-menu {
+  width: 100%;
+
   display: none;
   @media (min-width: nth($breakpoints, 2) - 1) {
     display: none !important;
