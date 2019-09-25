@@ -1,12 +1,14 @@
 import Swal from 'sweetalert2';
 import gqlBuilder from './gql';
 
+import { API } from '../config';
+
 /**
  * @param {Document} [doc] - Somebody's name.
  */
 
 export default async doc => {
-    const gql = gqlBuilder('https://api-euwest.graphcms.com/v1/ck0z78jwr0c9001b2czxygwyg/master');
+    const gql = gqlBuilder(API);
     const input = doc.getElementById('order-id');
     const submitBtn = doc.getElementById('submit');
 

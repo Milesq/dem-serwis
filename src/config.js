@@ -17,3 +17,5 @@ export const routes = [
         handler: about
     }
 ];
+
+export const API = 'https://api-euwest.graphcms.com/v1/ck0z78jwr0c9001b2czxygwyg/master';
