@@ -10,49 +10,51 @@
 </head>
 
 <body>
-    <div class="navigation">
-        <nav class="navigation__container">
-            <a class="navigation__item" href="/" data-navigo>Strona Główna</a>
-            <a class="navigation__item" href="/who" data-navigo>Kim jesteśmy</a>
-            <a class="navigation__item" href="/about" data-navigo>Co robimy</a>
-            <canvas id="indicator" class="indicator"></canvas>
-        </nav>
+    <section class="landing-page-wrapper">
+        <div class="navigation">
+            <nav class="navigation__container">
+                <a class="navigation__item" href="/" data-navigo>Strona Główna</a>
+                <a class="navigation__item" href="/who" data-navigo>Kim jesteśmy</a>
+                <a class="navigation__item" href="/about" data-navigo>Co robimy</a>
+                <canvas id="indicator" class="indicator"></canvas>
+            </nav>
 
-        <a href="/" data-navigo class="link-logo__wrapper">
-            <img src="./img/logo.png" alt="Logo szkoły" class="link-logo">
-        </a>
+            <a href="/" data-navigo class="link-logo__wrapper">
+                <img src="./img/logo.png" alt="Logo szkoły" class="link-logo">
+            </a>
 
-        <button class="hamburger hamburger--collapse" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <span class="mobile-menu">
+                <div class="navigation__item--mobile">
+                    <a href="/" data-navigo>
+                        <i class="fas fa-home"></i>
+                        <span>Strona Główna</span>
+                    </a>
+                </div>
+                <div class="navigation__item--mobile">
+                    <a href="/who" data-navigo>
+                        <i class="fas fa-users"></i>
+                        <span>Kim jesteśmy</span>
+                    </a>
+                </div>
+                <div class="navigation__item--mobile">
+                    <a href="/about" data-navigo>
+                        <i class="fas fa-hammer"></i>
+                        <span>Co robimy</span>
+                    </a>
+                </div>
             </span>
-        </button>
-        <span class="mobile-menu">
-            <div class="navigation__item--mobile">
-                <a href="/" data-navigo>
-                    <i class="fas fa-home"></i>
-                    <span>Strona Główna</span>
-                </a>
-            </div>
-            <div class="navigation__item--mobile">
-                <a href="/who" data-navigo>
-                    <i class="fas fa-users"></i>
-                    <span>Kim jesteśmy</span>
-                </a>
-            </div>
-            <div class="navigation__item--mobile">
-                <a href="/about" data-navigo>
-                    <i class="fas fa-hammer"></i>
-                    <span>Co robimy</span>
-                </a>
-            </div>
-        </span>
 
-    </div>
-    <div class="hidden fluid-img">
-        <h1>Jesteśmy do twojej dyspozycji!</h1>
-        DEM - szkolny serwis komputerowy
-    </div>
+        </div>
+        <div class="hidden fluid-img">
+            <h1>Jesteśmy do twojej dyspozycji!</h1>
+            DEM - szkolny serwis komputerowy
+        </div>
+    </section>
 
     <main>
         <div id="app"></div>

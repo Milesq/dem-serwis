@@ -41,12 +41,14 @@ const additionalsCallback = new Proxy(
     {
         'index_page.html'() {
             document.querySelector('.fluid-img').classList.remove('hidden');
+            document.querySelector('.landing-page-wrapper').style.height = '100vh';
         }
     },
     {
         get(target, name) {
             const hide = () => {
                 document.querySelector('.fluid-img').classList.add('hidden');
+                document.querySelector('.landing-page-wrapper').style.height = '';
             };
 
             return name in target ? target[name] : hide;
