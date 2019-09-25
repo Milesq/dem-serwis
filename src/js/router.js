@@ -26,6 +26,15 @@ routes.forEach(({ path, name, handler }) => {
 
 router.notFound(() => router.navigate('/'));
 
+const hamburger = document.querySelector('.hamburger');
+router.hooks({
+    after() {
+        if (hamburger.classList.contains('is-active')) {
+            hamburger.dispatchEvent(new Event('click'));
+        }
+    }
+});
+
 router.resolve();
 
 const additionalsCallback = new Proxy(
