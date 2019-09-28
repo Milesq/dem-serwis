@@ -42,8 +42,8 @@
         "parcel": "^1.12.3",
         "prettier": "^1.18.2",
         "sass": "^1.23.0-module.beta.1",
-        "stylelint": "^10.1.0",
-        "stylelint-config-recommended-scss": "^3.3.0",
+        "stylelint": "^11.0.0",
+        "stylelint-config-recommended-scss": "^4.0.0",
         "stylelint-scss": "^3.10.0"
     },
     "dependencies": {
