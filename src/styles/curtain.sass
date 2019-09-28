@@ -24,6 +24,10 @@ $radius: 3px
             box-shadow: 0 1px 5px -3px #000
             background-color: #fff
             width: 60vw
+
+            @media (max-width: nth($breakpoints, 3))
+                width: 95vw
+
             height: 75vh
             border-radius: $radius
 
@@ -32,12 +36,19 @@ $radius: 3px
         display: grid
         grid-template-columns: 3fr 5fr
 
+        @media (max-width: nth($breakpoints, 2))
+            grid-template-columns: 1fr
+
     &__image
         border-top-left-radius: $radius
         border-bottom-left-radius: $radius
         background-size: cover !important
         background-repeat: no-repeat !important
         background-position: center
+
+        @media (max-width: nth($breakpoints, 2))
+            display: none
+
 
     &__description
         padding: 40px
