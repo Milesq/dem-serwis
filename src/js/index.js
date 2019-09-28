@@ -36,7 +36,8 @@ export default async doc => {
             const config = {
                 type: 'info',
                 title: order.name,
-                text: order.description
+                text: order.description,
+                footer: 'Chcesz żebyśmy cię powiadomili kiedy twój sprzęt będzie gotowy?'
             };
 
             if (order.done) {
@@ -44,9 +45,14 @@ export default async doc => {
                 config.title = 'Urządzenie gotowe do odebrania';
                 config.confirmButtonColor = '#47f247';
                 config.text = '';
+                config.footer = undefined;
             }
 
             Swal.fire(config);
+
+            // if (!order.done && (await Notification.requestPermission()) == 'granted') {
+            //     navigator.serviceWorker.register('worker.js');
+            // }
         }
     }
 
