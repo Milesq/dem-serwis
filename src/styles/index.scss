@@ -57,10 +57,15 @@ $sassy-accent-color: #29b6f6;
 
   #order-id {
     @include sassy-text;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
   }
 
   #submit {
     @include sassy-button;
     color: white;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
