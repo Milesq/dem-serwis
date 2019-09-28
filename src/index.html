@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TODO">
     <title>DemSerwis - Szkolny Serwis komputerowy</title>
     <link rel="stylesheet" href="./styles/main.scss">
     <link rel="shortcut icon" href="./favicon.ico">
@@ -60,15 +61,17 @@
         <div id="app"></div>
 
         <footer class="footer">
-            <script>
-                document.write(new Date().getFullYear());
-                document.close();
-            </script>r.
+            <span id="year"></span>
+            r.
             &copy;
             | #DEM
         </footer>
     </main>
 
+    <script>
+        document.getElementById('year')
+            .innerHTML = new Date().getFullYear();
+    </script>
     <script src="./js/hamburger.js"></script>
     <script src="./js/router.js"></script>
 </body>
