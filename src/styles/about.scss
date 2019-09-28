@@ -12,6 +12,10 @@
 
   display: grid;
 
+  @media (max-width: nth($breakpoints, 5) - 1) {
+    padding-top: 100px;
+  }
+
   @media (min-width: nth($breakpoints, 2) - 1) {
     grid-template-columns: 1fr 1fr;
   }
