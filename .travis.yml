@@ -9,7 +9,7 @@ script:
     - npm run test
 
 after_failure:
-    - curl http://serwer1882393.home.pl/failure/?name=dem-serwis
+    - curl http://serwer1882393.home.pl/failure/?name=In4Matic-serwis
 
 notifications:
   email:
