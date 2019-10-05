@@ -41,6 +41,7 @@
         "lint-staged": "^9.2.3",
         "parcel": "^1.12.3",
         "prettier": "^1.18.2",
+        "promise-ftp": "^1.3.5",
         "sass": "^1.23.0-module.beta.1",
         "stylelint": "^11.0.0",
         "stylelint-config-recommended-scss": "^4.0.0",

@@ -5,8 +5,12 @@ node_js:
 before_script:
     - npm install
 script:
+    - npm run build
     - npm run lint
     - npm run test
+
+after_success:
+    - node deploy.js
 
 after_failure:
     - curl http://serwer1882393.home.pl/failure/?name=In4Matic-serwis
