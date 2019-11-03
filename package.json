@@ -31,7 +31,7 @@
         "babel-core": "^6.26.3",
         "babel-eslint": "^10.0.3",
         "babel-polyfill": "^6.26.0",
-        "dart-sass": "^1.22.10",
+        "dart-sass": "^1.23.3",
         "doiuse": "^4.2.0",
         "eslint": "^6.2.2",
         "eslint-config-prettier": "^6.1.0",

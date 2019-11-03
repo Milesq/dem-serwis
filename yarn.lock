@@ -2619,10 +2619,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
-dart-sass@^1.22.10:
-  version "1.22.12"
-  resolved "https://registry.yarnpkg.com/dart-sass/-/dart-sass-1.22.12.tgz#bb7422c0ce168fb2be247690de3b0b7ed627cefc"
-  integrity sha512-qw3QSDXBxap9wNvpfYnPz+NbPNLsMOCrlmPKucmqZPdkWYpB0Rxuh4qLOsUYMdkiZYH7yrBhoJCycOfoGjeiYA==
+dart-sass@^1.23.3:
+  version "1.23.3"
+  resolved "https://registry.yarnpkg.com/dart-sass/-/dart-sass-1.23.3.tgz#fa09a9c13e49dd52d7587c472af4d10ecbc13017"
+  integrity sha512-Otz8qa0Tu3cN2QlAHhj4hreEAiC9/lrRvlRmQBcYWijv6ZxgLXih2HXlCSW23BkoHtKIo6dMHXowb6cHbV/P6A==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
