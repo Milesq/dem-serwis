@@ -23,6 +23,12 @@
     margin: nth($img-width, 1) * 1/3;
     @include shadow;
     @include size(nth($img-width, 1));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    * {
+      text-align: center;
+    }
 
     @media (max-width: nth($breakpoints, 3)) {
         @include size(nth($img-width, 2));
