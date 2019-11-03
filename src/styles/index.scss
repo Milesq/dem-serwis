@@ -22,7 +22,7 @@ $sassy-accent-color: #29b6f6;
   background-color: #eee;
   padding: 0 30px;
   padding-top: 2.5%;
-  min-height: calc(100vh - 90px);
+  padding-bottom: 50px;
 
   display: flex;
   flex-direction: column;
@@ -52,8 +52,12 @@ $sassy-accent-color: #29b6f6;
 .check-order {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  width: 60%;
+  // width: 60%;
   margin-top: 3%;
+
+  $margin-left-right: 30px;
+  margin-left: $margin-left-right;
+  margin-right: $margin-left-right;
 
   #order-id {
     @include sassy-text;
