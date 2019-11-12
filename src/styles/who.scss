@@ -74,7 +74,7 @@
       '4.Karol_Wozniak.jpg',
       '5.Mikolaj_Biernacki.jpg',
       '6.Tomek_Slocinski.jpg',
-      '7.Milosz_Wisniewski.png';
+      '7.Milosz_Wisniewski.jpg';
 
     @for $i from 1 through list.length($images) {
       &:nth-child(#{$i}) {

@@ -7,7 +7,7 @@ const images = [
     require('../img/persons/4.Karol_Wozniak.jpg'),
     require('../img/persons/5.Mikolaj_Biernacki.jpg'),
     require('../img/persons/6.Tomek_Slocinski.jpg'),
-    require('../img/persons/7.Milosz_Wisniewski.png')
+    require('../img/persons/7.Milosz_Wisniewski.jpg')
 ];
 
 /**
