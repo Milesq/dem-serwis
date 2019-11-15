@@ -174,11 +174,10 @@ main {
 }
 
 .link-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 52px;
-
-  @media (min-width: nth($breakpoints, 2) - 1) {
-    display: none;
-  }
 }
 
 b {
